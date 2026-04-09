@@ -1,13 +1,11 @@
 package ru.aliyev.watchdog;
 
-/**
- * Hello world!
- *
- */
-public class App 
-{
-    public static void main( String[] args )
-    {
-        System.out.println( "Hello World!" );
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+
+public class App {
+    public static void main( String[] args ) {
+        AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext(AppConfig.class);
+        System.out.println("Application Context is working correctly");
+        context.close();
     }
 }
